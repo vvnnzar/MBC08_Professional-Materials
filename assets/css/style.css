@@ -1,0 +1,280 @@
+:root {
+  --dark: rgb(15, 15, 15);
+  --light: #fff;
+  --shadow: 10px 10px 75px rgba(0, 0, 0, 0.596);
+  --bright: rgb(255, 192, 203);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bright);
+  margin: 30px 50px;
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+  box-shadow: var(--shadow);
+}
+
+h1 {
+  margin-top: 6rem;
+  letter-spacing: 1.5rem;
+  text-transform: uppercase;
+}
+
+a {
+  color: var(--dark);
+}
+
+p {
+  font-size: 18px;
+}
+
+/* Navigation */
+
+.nav ul {
+  display: grid;
+  grid-gap: 20px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.nav a {
+  background: var(--bright);
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: var(--dark);
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.nav a:hover {
+  background: var(--dark);
+  color: var(--light);
+}
+
+/* Personal Showcase Div */
+.showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  padding-bottom: 1rem;
+}
+
+.showcase img {
+  margin-top: 10rem;
+  height: 600px;
+  width: 450px;
+  box-shadow: 10px 10px 75px rgba(0, 0, 0, 0.596);
+  transform: 90deg;
+}
+
+.showcase h2,
+.showcase p {
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 5px 0 10px;
+  text-align: center;
+}
+
+.statement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Flip card showcase */
+
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  text-align: center;
+  transition: transform 1.9s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.statement {
+  text-align: center;
+}
+
+/* Contact Details Section */
+.contact-boxes {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.box {
+  background: var(--primary);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin: 20px 20px;
+}
+
+/* About Information */
+.about {
+  display: grid;
+  margin-top: 6rem;
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: var(--shadow);
+  height: 600px;
+  width: 60%;
+  margin-left: 20%;
+  text-align: justify;
+  padding-right: 2rem;
+}
+
+.about img {
+  height: 600px;
+  width: 600px;
+  object-fit: cover;
+}
+
+.about h1 {
+  text-align: center;
+}
+
+.about p {
+  justify-content: space-evenly;
+  align-content: stretch;
+  margin-right: 1rem;
+  margin-top: 2rem;
+}
+
+/* Portfolio Section */
+.portfolio {
+  margin-top: 10rem;
+  padding: 0 16px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: var(--shadow);
+}
+
+.portfolio-label {
+  margin-top: 15rem;
+  text-align: center;
+}
+
+.item {
+  align-items: center;
+  border: var(--light);
+  text-align: center;
+}
+
+.item img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.item h1 {
+  font-size: medium;
+}
+/*Button*/
+.btn {
+  background: var(--dark);
+  color: var(--light);
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border-radius: 3%;
+  font-size: 14px;
+  font-weight: bolder;
+  float: center;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  background: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem;
+  font-size: 16px;
+}
+
+/* Media Queries*/
+
+@media (max-width: 900px) {
+  .showcase {
+    margin-top: 5rem;
+  }
+
+  .nav ul {
+    grid-template-columns: auto;
+    align-content: center;
+    background-color: var(--dark);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(0deg);
+  }
+
+  .contact-boxes {
+    grid-template-columns: auto;
+  }
+
+  .contact-boxes h1 {
+    text-align: center;
+  }
+
+  .about {
+    grid-template-columns: auto;
+  }
+
+  .portfolio-label {
+    margin-top: 130%;
+  }
+  .portfolio {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 3rem;
+  }
+
+  .item img {
+    width: 500px;
+    height: 400px;
+  }
+
+  .btn {
+    margin-top: 5rem;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
