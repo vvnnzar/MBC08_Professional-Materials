@@ -13,7 +13,7 @@ This portfolio is a personal respresentation of accomplishments to date as part 
 ### Screen layout and Design
 
 The following image depicts the web application's appearance and functionality:
-(![Vivianne Zara Portfolio Screen Design](https://github.com/vvnnzar/MBC08-Professional-Materials/blob/main/assets/screen%20design/screen%20design.PNG))
+(![Vivianne Zara Portfolio Screen Design](https://github.com/vvnnzar/MBC08_Professional-Materials/blob/main/screen_design/screen%20design.PNG))
 
 ### Acknowledgements
 
@@ -35,7 +35,7 @@ To view and modify code you will require installation of HTML and Code editor so
 4. Initialise the project using command: git init
 
 Your project structure should mirror the following file structure:
-/.assets (Note: assets includes css , js and screen design files)
+/.assets (Note: assets includes css, images, screen design and resume files)
 /index.html
 /ReadMe.md
 
